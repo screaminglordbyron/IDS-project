@@ -8,3 +8,7 @@ Possibly use descriptions and NER to add location data to the images where it's 
 In addition, for photos with location data, we could look at the users' evaluation of how much a given location has changed over the years (users can give a 3-tier score to the changes: little ... great), this hasn't been researched yet at all. 
 
 
+
+### Guide for using Lemmatizer.py
+
+TODO: estNLTK instructions, langdetect, what is lemmatisation, POS-tagging, disambiguation, proper nouns, NER, disambiguation
