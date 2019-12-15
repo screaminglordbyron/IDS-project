@@ -57,7 +57,7 @@ terminator = False
 puhkamisi = 0
 for index, rida in marksonad.iterrows(): #läbime andmestiku iga rea.
 
-    #Kirjutame iga 500 leitud tulemusrea järel tulemuse csv faili igaksjuhuks. Programm võib lõppeda geopy piirangute pärast töötamast ja siis katkestades on meil tulemusfail alles.
+    #Kirjutame iga 500 tsükli käigu järel tulemuse csv faili igaksjuhuks. Programm võib lõppeda geopy piirangute pärast töötamast ja siis katkestades on meil tulemusfail alles.
     if i % 500 == 0:
         try:
             tulemus = pd.DataFrame(row_list)
