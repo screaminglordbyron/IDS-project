@@ -6,7 +6,12 @@ Repository for the team project in the course Introduction to Data Science 2019
 Ajapaik is a web and mobile app that contains thousands of old photographs with plenty of metadata ranging from the titles and descriptions to the location and rephotographs of the place depicted in the pictures. (ajapaik.ee)
 Our goal is analysing the textual metainformation of photographs in Ajapaik - lemmatise the descriptions, create keywords and use named entities to add location data to the images where it is currently missing.
 
+### Data
 
+The data we used and generated can be found in the following Google Drive link: https://drive.google.com/drive/folders/1LIUqPHGhVgdt7TXbpOhpzcvo04vKenHA?fbclid=IwAR1FJTfejqPHWJbXlvK5nWsg1xfkU4C0Mi-aOY9h0KVJeTQXQHWC5In7KeI
+The file data.csv contains the metadata information from all the photographs we scraped from Ajapaik's API.
+The file marksonad_nimedega.csv is the result of using Lemmatizer.py on the data, it contains the photo ID, its description, the generated keywords and the proper nouns/names found in the description.
+The file koordineeritud6800.csv contains the 6800 instances for which we managed to find geographic coordinates using the geopy library. The file contains the photo ID, the description, the keywords, the names, the name used for location detection, and the latitude and longitude degrees.
 
 ### Guide for using Lemmatizer.py and linguistic jargon
 
