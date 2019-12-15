@@ -6,9 +6,15 @@ Repository for the team project in the course Introduction to Data Science 2019
 Ajapaik is a web and mobile app that contains thousands of old photographs with plenty of metadata ranging from the titles and descriptions to the location and rephotographs of the place depicted in the pictures. (ajapaik.ee)
 Our goal is analysing the textual metainformation of photographs in Ajapaik - lemmatise the descriptions, create keywords and use named entities to add location data to the images where it is currently missing.
 
+## Process
+
+We scraped the metadata of the images from Ajapaik's API using the code from API_kraapija.py. This resulted in a large csv-file containing all the information available for each photograph, e.g its ID, title, description, location data, whether it has been rephotographed etc. 
+Next, we used the code from Lemmatizer.py on this csv-file to lemmatise the descriptions, create keywords and find all proper nouns/names from the descriptions. This generated a new csv-file with the added information.
+Finally, we used tulemusfaililoomine.py to go through the newly generated proper noun lists for each photo and find out whether there is a name among the proper nouns that corresponds to an actual geographic location in Estonia. If we found such a place, we added its coordinates and the name of the place to the photo's metadata. We did this for 6800 of the photographs, as the python library we used, geopy, had a limit on the maximum number of requests we could send.
+
 ### Data
 
-The data we used and generated can be found in the following Google Drive link: https://drive.google.com/drive/folders/1LIUqPHGhVgdt7TXbpOhpzcvo04vKenHA?fbclid=IwAR1FJTfejqPHWJbXlvK5nWsg1xfkU4C0Mi-aOY9h0KVJeTQXQHWC5In7KeI
+The data we used and generated can be found in the following Google Drive link: https://drive.google.com/drive/folders/1LIUqPHGhVgdt7TXbpOhpzcvo04vKenHA?fbclid=IwAR1FJTfejqPHWJbXlvK5nWsg1xfkU4C0Mi-aOY9h0KVJeTQXQHWC5In7KeI 
 The file data.csv contains the metadata information from all the photographs we scraped from Ajapaik's API.
 The file marksonad_nimedega.csv is the result of using Lemmatizer.py on the data, it contains the photo ID, its description, the generated keywords and the proper nouns/names found in the description.
 The file koordineeritud6800.csv contains the 6800 instances for which we managed to find geographic coordinates using the geopy library. The file contains the photo ID, the description, the keywords, the names, the name used for location detection, and the latitude and longitude degrees.
