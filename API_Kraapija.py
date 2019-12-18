@@ -1,6 +1,8 @@
 import requests
 import pandas as pd
-import time
+import time 
+
+# Program collects all the information about photos in ajapaik API to the dataframe and puts it in csv file.
 
 #gives roughly % how much of collecting is done
 #takes "pageNR" on what iteration are we
@@ -48,10 +50,6 @@ df.to_csv("data.csv", sep='\t')
 print()
 print("DONE!")
 print("--- %s minutes ---" % str(round((time.time() - start_time) / 60, 2)))
-
-#Ma ei teadnud, kas pildid, mis on rephotos all oleks niisama ka välja tulnud.
-#Lisasin igaksjuhuks need veel eraldi dataframei, kui rephotode all midagi oli.
-#Peaks igaksjuhuks kontrollima ega duplikaate nüüd ei ole.
 
 #Output from code run, total page number was wrong in progress() function. Thats why progress is > 100%.
 ###################################
