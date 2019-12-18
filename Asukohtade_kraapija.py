@@ -2,11 +2,14 @@ import urllib.request
 import bs4
 import pandas as pd
 
+#Program creates dataframe of major location names in Estonia and puts the in csv file.
+
 url = "https://www.riigiteataja.ee/akt/74442"
 req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
 leht = urllib.request.urlopen(req).read()
 soup = bs4.BeautifulSoup(leht, 'html.parser')
 
+#Lets add cities manually.
 tulemus = ["Tallinn", "Tartu", "Narva", "Pärnu", "Kohtla-Järve",
            "Viljandi", "Maardu", "Rakvere", "Sillamäe", "Võru",
            "Kuressaare", "Valga", "Jõhvi", "Haapsalu", "Keila",
@@ -17,6 +20,7 @@ tulemus = ["Tallinn", "Tartu", "Narva", "Pärnu", "Kohtla-Järve",
            "Karksi-Nuia", "Lihula", "Mustvee", "Võhma", "Antsla",
            "Abja-Paluoja", "Püssi", "Suure-Jaani", "Kallaste", "Mõisaküla"]
 
+#Lets collect major location names.
 for br in soup.findAll('br'):
     next_s = br.nextSibling
     if not (next_s and isinstance(next_s,bs4.NavigableString)):
