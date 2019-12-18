@@ -23,12 +23,12 @@ The file Asukohad.csv contains a lot of location names in Estonia.
 The file koordineeritud6800.csv contains the 6800 instances for which we managed to find geographic coordinates using the geopy library. The file contains the photo ID, the description, the keywords, the names, the name used for location detection, and the latitude and longitude degrees. The file does not contain photos where coordinates were already set.
 
 ### Program quick descriptions
-**Api_Kraapija.py**- scrapes information about all photos from internet.
-**Asukohtade_kraapija.py**- scrapes most of the major location names in Estonia.
-**IamNotebook.ipynb**- with notebook it is better to view datasets.
-**Koordinaator.py**- with this file we tested the geopy opportunities.
-**Lemmatiser.py**- lemmatizes photo descriptions given in Estonian and find nouns and names. Creates corresbonding dataset.
-**tulemusfaililoomine.py**- creates the file where we added coordinates if there was not coordinates before. Photos where coordinates were already set does not show up in this dataset.
+**Api_Kraapija.py**- scrapes information about all photos from internet.    
+**Asukohtade_kraapija.py**- scrapes most of the major location names in Estonia.    
+**IamNotebook.ipynb**- with notebook it is better to view datasets.    
+**Koordinaator.py**- with this file we tested the geopy opportunities.    
+**Lemmatiser.py**- lemmatizes photo descriptions given in Estonian and find nouns and names. Creates corresbonding dataset.   
+**tulemusfaililoomine.py**- creates the file where we added coordinates if there was not coordinates before. Photos where coordinates were already set does not show up in this dataset.    
 
 ### Guide for using scraping programs
 **Api_kraapija.py**- you should install libraries requests and pandas. Running the code results with a csv file with inforamation about all the photos. Network connection also required.    
